@@ -41,7 +41,8 @@ class PaydayCallendar
     {
         $bonusPayday = $this->findBonusPaydayDateInActualMonth();
         $rawPayday = $this->findRawPaydayDateInActualMonth();
-        return [ 'raw_payday' => $rawPayday, 'bonus_payday' => $bonusPayday ];
+        $monthName = $this->date->monthName;
+        return ['month_name' => $monthName, 'raw_payday' => $rawPayday, 'bonus_payday' => $bonusPayday ];
     }
 
     public function findRawPaydayDateInActualMonth() : string

@@ -48,7 +48,8 @@ final class PaydayCallendarTest extends TestCase
     public function testGeneratePaydayDatesForEachMonthTillEndOfYear(): void
     {
         $actual = self::$callendar->generatePaydayDatesForEachMonthTillEndOfYear();
-        $expected = '[{"raw_payday":"31-08-2020","bonus_payday":"19-08-2020"},{"raw_payday":"30-09-2020","bonus_payday":"15-09-2020"},{"raw_payday":"30-10-2020","bonus_payday":"15-10-2020"},{"raw_payday":"30-11-2020","bonus_payday":"18-11-2020"},{"raw_payday":"31-12-2020","bonus_payday":"15-12-2020"}]';
+        echo $actual;
+        $expected = '[{"month_name":"August","raw_payday":"31-08-2020","bonus_payday":"19-08-2020"},{"month_name":"September","raw_payday":"30-09-2020","bonus_payday":"15-09-2020"},{"month_name":"October","raw_payday":"30-10-2020","bonus_payday":"15-10-2020"},{"month_name":"November","raw_payday":"30-11-2020","bonus_payday":"18-11-2020"},{"month_name":"December","raw_payday":"31-12-2020","bonus_payday":"15-12-2020"}]';
         $this->assertEquals( $actual, $expected );
     }
 }
