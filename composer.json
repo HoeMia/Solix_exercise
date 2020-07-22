@@ -1,12 +1,16 @@
 {
-    "name": "Solix_exercise_project",
+    "name": "mia/solix_exercise_project",
     "description": "",
 
     "require-dev": {
         "phpunit/phpunit": "9",
         "nesbot/carbon": "^2.36"
     },
-    
-    "require": {
+
+    "autoload":{
+        "psr-4": {
+            "ACT\\": "vendor/",
+            "App\\": "src/"
+        }
     }
 }
