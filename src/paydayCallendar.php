@@ -16,7 +16,7 @@ class PaydayCallendar
         $this->dateFormat = $date_format;
         $formatted_date == "" ?
             $this->date = Carbon::now()
-                :
+            :
             $this->date = Carbon::createFromFormat( $this->dateFormat, $formatted_date );
     }
 

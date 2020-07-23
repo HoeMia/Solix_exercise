@@ -17,7 +17,14 @@ class CsvGenerator
     public static function saveCsvAsFile( $csvString, $savePath, $fileName ): void
     {
         $fullSavePath = $savePath . $fileName;
+        try 
+        {
         file_put_contents( $fullSavePath, $csvString);
+        } 
+        catch (Exception $e) 
+        {
+            echo 'Saving file exception: ',  $e->getMessage(), "\n";
+        }
     }
     
     private static function createColumnNamesRow(): string
@@ -27,6 +34,13 @@ class CsvGenerator
 
     private function  getRowStringFromPaydayRow( $row ): string
     {
-        return $row['month_name'] . "," . $row['raw_payday'] . "," . $row['bonus_payday'] . "\n";
+        try 
+        {
+            return $row['month_name'] . "," . $row['raw_payday'] . "," . $row['bonus_payday'] . "\n";
+        } 
+        catch (Exception $e) 
+        {
+            echo 'Generating string from payday array exception: ',  $e->getMessage(), "\n";
+        }
     }
 }
