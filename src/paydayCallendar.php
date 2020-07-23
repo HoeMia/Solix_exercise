@@ -34,7 +34,7 @@ class PaydayCallendar
             array_push( $responseArray, $this->getPaydaysForActualMonth() );
             $this->goToNextMothFromActualDate(); 
         }
-        return json_encode($responseArray);
+        return $responseArray;
     }
 
     public function getPaydaysForActualMonth()
