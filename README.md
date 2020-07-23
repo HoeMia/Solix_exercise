@@ -15,13 +15,13 @@ This is a test project in PHP made to show my, let's say, DECENT PHP SKILLS.
 
 # Project Setup
 - download files to a folder on Your machine
-- run ```sh composer update ``` to download needed packages
+- run ``` composer update ``` to download needed packages
 
 # Testing
-- to run tests, use command ```sh./vendor/bin/phpunit tests``` from root path of the project
+- to run tests, use command ``` ./vendor/bin/phpunit tests ``` from root path of the project
 
 # Running program
-- Program is executed from console. To run it just use ```sh php .\generatePaydayCsv.php ```
+- Program is executed from console. To run it just use ``` php .\generatePaydayCsv.php ```
 #### It can be run with four OPTIONAL options: 
 - -d (for date) - provided in a format "m-d-Y" or, if You specify format, in the given format. If date is not provided, todays date is assumed
 - -f (for date format) - specify date format (see possible formats for Carbon) like "Y-m-d". If not provided, default format is "m-d-Y"
@@ -29,7 +29,7 @@ This is a test project in PHP made to show my, let's say, DECENT PHP SKILLS.
 - -n (for file name) - specifies filename (without extension). If not specified, You will get a file named "paydayDates_[timestamp]_[date]"
 
 #### Examples of invoking script
-```sh
+```
 php .\generatePaydayCsv.php -d"2020-07-12" -f"Y-m-d" -p"c:/smth"
 php .\generatePaydayCsv.php -f"Y-m-d"
 php .\generatePaydayCsv.php -d"2020-07-12"
